@@ -204,6 +204,21 @@
 
 /* При открытом попапе блокируем прокрутку страницы */
 body.modal-open{ overflow:hidden; }
+
+
+/* === Popup Royce enhancements (append only) === */
+.badge-fire{
+  background: linear-gradient(135deg,#ffb36b,#ff7a6e);
+  color:#fff; padding:.65rem 1.1rem; border-radius:999px; font-weight:900;
+  box-shadow: 0 10px 28px rgba(255,122,110,.28);
+}
+.badge-fire svg{ width:1.05rem; height:1.05rem; filter: drop-shadow(0 0 6px rgba(255,150,90,.6)); }
+.offer-card{ border-radius: 26px; }
+@media (max-width: 768px){
+  #offer{ align-items:flex-end } /* превращаем модал в bottom-sheet */
+  .offer-card{ width:100%; border-bottom-left-radius:0; border-bottom-right-radius:0 }
+}
+
 </style>
 
   <script type="application/ld+json">
@@ -472,22 +487,38 @@ body.modal-open{ overflow:hidden; }
 </footer>
 
 <!-- Offer popup -->
-<div id="offer" aria-labelledby="offerTitle" aria-describedby="offerDesc" class="fixed inset-0 z-[80] items-center justify-center bg-black/60 backdrop-blur-md p-4 hidden">
-  <div class="offer-card rounded-2xl w-full max-w-md p-6 shadow-2xl relative">
-    <div class="badge-fire text-sm md:text-base">
-      −30% первый сеанс
+<div id="offer" aria-labelledby="offerTitle" aria-describedby="offerDesc"
+     class="fixed inset-0 z-[80] items-center justify-center bg-black/60 backdrop-blur-md p-4 hidden">
+  <div class="offer-card rounded-3xl w-full max-w-xl p-7 md:p-8 shadow-2xl relative">
+    <div class="badge-fire text-base md:text-lg select-none inline-flex items-center gap-2">
+      <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18">
+        <path fill="#fff" d="M12 3c-1 0-1.5.6-2.2 1.6l-.4.6c-.2.3-.6.4-1 .2-.4-.2-.6-.7-.3-1l.4-.6C9.4 2.4 10.4 1.5 12 1.5c1.6 0 2.6.9 3.5 2.3l.4.6c.3.3.1.8-.3 1-.4.2-.8.1-1-.2l-.4-.6C13.5 3.6 13 3 12 3Zm8 7.5c0-1.2-1-2.2-2.2-2.2H6.2C5 8.3 4 9.3 4 10.5V18c0 1.2 1 2.2 2.2 2.2h11.6c1.2 0 2.2-1 2.2-2.2v-7.5Z"/>
+      </svg>
+      <span>−30%</span>
+      <span class="opacity-70">•</span>
+      <span class="sr-only">скидка на первый сеанс</span>
     </div>
-    <h4 id="offerTitle" class="text-2xl font-extrabold mt-3 mb-2">Спецпредложение</h4>
-    <p id="offerDesc" class="text-lg leading-relaxed">Скидка на 60-минутный классический массаж. Напишите, чтобы забронировать время.</p>
-    <div class="flex gap-2 mt-5 flex-wrap">
-      <a href="https://wa.me/79883461719" target="_blank" class="btn btn-wa" rel="noopener noreferrer">WhatsApp</a>
-      <a href="https://t.me/RomanDzen89" target="_blank" class="btn btn-tg" rel="noopener noreferrer">Telegram</a>
-      <button id="closeOffer" class="btn btn-ghost">Позже</button>
+
+    <h4 id="offerTitle" class="text-3xl md:text-4xl font-extrabold mt-5 leading-tight">
+      Экономия 750 ₽<br class="hidden md:block">на первом сеансе
+    </h4>
+    <p id="offerDesc" class="text-lg md:text-xl leading-relaxed mt-3">
+      Только до 20 августа. 60 минут классического массажа.
+    </p>
+
+    <div class="flex gap-3 mt-6 flex-wrap">
+      <a href="https://wa.me/79883461719" target="_blank" rel="noopener noreferrer" class="btn btn-wa text-base md:text-lg">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 3.5A10 10 0 1 0 3.9 17.8L3 21l3.3-.9A10 10 0 1 0 20 3.5ZM8.8 7.8c.2-.5.3-.5.7-.5h.6c.2 0 .3 0 .4.3s.5 1.1.5 1.2c0 .1 0 .2-.1.3-.2.2-.5.6-.5.7 0 .2 0 .3.1.4.2.2.5.9 1.2 1.4.8.5 1.4.7 1.6.8.2 0 .3 0 .4-.1.1-.2.5-.6.6-.8.1-.1.2-.1.3 0l1.1.5c.2.1.3.1.3.2 0 .1.1.9-.5 1.5-.5.6-1.2.6-2 .5-.8-.1-1.8-.6-2.8-1.4-1-.8-1.8-2.2-2-2.6-.2-.4-.5-1.3-.3-2 .2-.7.5-1 .7-1.2Z"/></svg>
+        WhatsApp
+      </a>
+      <a href="https://t.me/RomanDzen89" target="_blank" rel="noopener noreferrer" class="btn btn-tg text-base md:text-lg">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9.8 15.5 9.9 12l7.2-6.5c.3-.3-.1-.4-.5-.2L6.6 10.2l-3.7-1.2c-.8-.3-.8-.8.2-1.2L20 3.5c.7-.3 1.2.2 1 1l-3 14.2c-.2.8-.7 1-1.4.6l-6.2-3.8-.9.9c-.1.1-.2.1-.3 0l.6-1.9Z"/></svg>
+        Telegram
+      </a>
+      <button id="closeOffer" class="btn btn-ghost text-base md:text-lg">Позже</button>
     </div>
   </div>
-</div>
-
-<script>
+</div><script>
   // Reveal on scroll
   const ro = new IntersectionObserver((es)=>{
     es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); ro.unobserve(e.target);} })
