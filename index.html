@@ -2,8 +2,36 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0b1823">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://example.com/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
   <title>Массаж в Анапе — Роман Лунев</title>
+  <meta name="description" content="Профессиональный массаж в Анапе: классический, антицеллюлитный, спина и шея. Спокойно, без боли. Запись в WhatsApp/Telegram.">
+  <meta property="og:title" content="Массаж в Анапе — Роман Лунев">
+  <meta property="og:description" content="Спокойный, аккуратный массаж без боли. Запись в WhatsApp/Telegram.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:image" content="images/og.jpg">
+  <meta property="og:url" content="https://example.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="images/hero.jpg">
+
+  <!-- PROD NOTE:
+       For best performance, build Tailwind to a static CSS file and remove the CDN script.
+       Example:
+       <link rel="preload" as="style" href="/styles.css">
+       <link rel="stylesheet" href="/styles.css">
+       Then delete: <script src="https://cdn.tailwindcss.com"></script>
+  -->
+
+
 
   <!-- Tailwind for quick layout -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -177,13 +205,38 @@
 /* При открытом попапе блокируем прокрутку страницы */
 body.modal-open{ overflow:hidden; }
 </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    "name": "Роман Лунев — массаж",
+    "url": "https://example.com/",
+    "telephone": "+7-988-346-17-19",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Анапа",
+      "addressCountry": "RU"
+    },
+    "priceRange": "₽₽",
+    "areaServed": "Анапа",
+    "image": "https://example.com/images/og.jpg",
+    "openingHours": "Mo-Su 10:00-21:00"
+  }
+  </script>
+
+<noscript id="noscript-offer"><style>#offer{display:none!important}</style></noscript>
 </head>
 <body>
 <header class="sticky top-0 z-50 glass border-b border-slate-700/40">
   <div class="max-w-6xl mx-auto flex items-center justify-between py-3 px-4">
     <div class="flex items-center gap-3">
       <div class="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-300 to-sky-500 grid place-items-center text-slate-900 font-extrabold">RL</div>
-      <div class="text-sm tracking-[.18em] font-extrabold">ROMAN LUNEV MASSAGE • АНАПА</div>
+    <button id="menuToggle" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-700/50" aria-expanded="false" aria-controls="mobileNav" aria-label="Открыть меню">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+
+      <div class="text-sm tracking-[.18em] font-extrabold">ROMAN LUNEV MASSAGE • Анапа</div>
     </div>
     <nav class="hidden md:flex items-center gap-6 text-slate-300">
       <a href="#services" class="hover:text-white">Услуги</a>
@@ -192,9 +245,22 @@ body.modal-open{ overflow:hidden; }
       <a href="#cta" class="hover:text-white">Запись</a>
     </nav>
     <div class="hidden sm:flex items-center gap-2">
-      <a href="https://wa.me/79883461719" target="_blank" class="btn btn-wa">WhatsApp</a>
-      <a href="https://t.me/RomanDzen89" target="_blank" class="btn btn-tg">Telegram</a>
+      <a href="https://wa.me/79883461719" target="_blank" class="btn btn-wa" rel="noopener noreferrer">WhatsApp</a>
+      <a href="https://t.me/RomanDzen89" target="_blank" class="btn btn-tg" rel="noopener noreferrer">Telegram</a>
     </div>
+  </div>
+
+  <div id="mobileNav" class="md:hidden hidden border-t border-slate-800 bg-slate-900/70 backdrop-blur-md">
+    <nav class="flex flex-col p-4 gap-4 text-slate-200">
+      <a href="#services" class="hover:text-white">Услуги</a>
+      <a href="#about" class="hover:text-white">Обо мне</a>
+      <a href="#gallery" class="hover:text-white">Атмосфера</a>
+      <a href="#cta" class="hover:text-white">Запись</a>
+      <div class="flex gap-2 pt-2">
+        <a href="https://wa.me/79883461719" target="_blank" class="btn btn-wa flex-1" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://t.me/RomanDzen89" target="_blank" class="btn btn-tg flex-1" rel="noopener noreferrer">Telegram</a>
+      </div>
+    </nav>
   </div>
 </header>
 
@@ -208,7 +274,7 @@ body.modal-open{ overflow:hidden; }
       <p class="muted mt-3 max-w-xl md:text-lg">Спокойный, аккуратный массаж без боли. Спина, шея, антицеллюлитный. Только по записи — в удобное для вас время.</p>
 
       <div class="flex flex-col sm:flex-row gap-3 mt-5">
-        <a href="https://wa.me/79883461719" target="_blank" class="btn btn-wa text-base sm:text-lg">
+        <a href="https://wa.me/79883461719" target="_blank" class="btn btn-wa text-base sm:text-lg" rel="noopener noreferrer">
           <!-- calendar icon -->
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
           Записаться
@@ -244,7 +310,7 @@ body.modal-open{ overflow:hidden; }
 
 <!-- Sticky CTA on mobile -->
 <div class="sticky-cta md:hidden flex gap-2 px-3">
-  <a href="https://wa.me/79883461719" target="_blank" class="btn btn-wa">Записаться</a>
+  <a href="https://wa.me/79883461719" target="_blank" class="btn btn-wa" rel="noopener noreferrer">Записаться</a>
   <a href="#services" class="btn btn-ghost">Услуги</a>
   <a href="tel:+79883461719" class="btn btn-ghost">Позвонить</a>
 </div>
@@ -258,29 +324,29 @@ body.modal-open{ overflow:hidden; }
     <div class="grid md:grid-cols-3 gap-5 mt-6">
       <div class="service-card card rounded-2xl p-5 reveal" data-image="images/hero.jpg" data-desc="Расслабление и восстановление. Снятие напряжения после дороги. Улучшение кровообращения.">
         <h3 class="text-xl font-bold">Классический массаж</h3>
-        <p class="muted mt-1">60 минут · от ХХХ₽</p>
+        <p class="muted mt-1">60 минут · 2 500 ₽</p>
         <ul class="list-disc pl-5 mt-3 text-slate-200 space-y-1 flex-1">
           <li>Мягко, без боли</li><li>Работа со спиной и шеей</li>
         </ul>
-        <a href="https://wa.me/79883461719" target="_blank" class="btn btn-wa mt-4">Записаться</a>
+        <a href="https://wa.me/79883461719" target="_blank" class="btn btn-wa mt-4" rel="noopener noreferrer">Записаться</a>
       </div>
 
       <div class="service-card card rounded-2xl p-5 reveal" data-image="images/work.jpg" data-desc="Работа с рельефом и застойными зонами. Индивидуальный курс с учётом чувствительности.">
         <h3 class="text-xl font-bold">Антицеллюлитный</h3>
-        <p class="muted mt-1">45 минут · от ХХХ₽</p>
+        <p class="muted mt-1">45 минут · 2 200 ₽</p>
         <ul class="list-disc pl-5 mt-3 text-slate-200 space-y-1 flex-1">
           <li>Аккуратно, без синяков</li><li>Локальная проработка</li>
         </ul>
-        <a href="https://wa.me/79883461719" target="_blank" class="btn btn-wa mt-4">Записаться</a>
+        <a href="https://wa.me/79883461719" target="_blank" class="btn btn-wa mt-4" rel="noopener noreferrer">Записаться</a>
       </div>
 
       <div class="service-card card rounded-2xl p-5 reveal" data-image="images/process.jpg" data-desc="Снятие зажимов, снижение усталости, подходит после перелёта/поездки.">
         <h3 class="text-xl font-bold">Спина и шея</h3>
-        <p class="muted mt-1">По запросу · от ХХХ₽</p>
+        <p class="muted mt-1">40 минут · 1 800 ₽</p>
         <ul class="list-disc pl-5 mt-3 text-slate-200 space-y-1 flex-1">
           <li>Точечно по проблемам</li><li>Мягкие техники</li>
         </ul>
-        <a href="https://wa.me/79883461719" target="_blank" class="btn btn-wa mt-4">Записаться</a>
+        <a href="https://wa.me/79883461719" target="_blank" class="btn btn-wa mt-4" rel="noopener noreferrer">Записаться</a>
       </div>
     </div>
 
@@ -293,13 +359,33 @@ body.modal-open{ overflow:hidden; }
         <h4 class="font-bold mb-3 text-2xl">Подробнее</h4>
         <p id="service-desc" class="muted text-lg">Наведите на карточку услуги, чтобы увидеть описание и фото. На телефоне — лёгкий тап.</p>
         <div class="flex gap-3 mt-6 flex-wrap justify-center md:justify-start">
-          <a href="https://wa.me/79883461719" target="_blank" class="btn btn-wa">Записаться</a>
-          <a href="https://t.me/RomanDzen89" target="_blank" class="btn btn-tg">Задать вопрос</a>
+          <a href="https://wa.me/79883461719" target="_blank" class="btn btn-wa" rel="noopener noreferrer">Записаться</a>
+          <a href="https://t.me/RomanDzen89" target="_blank" class="btn btn-tg" rel="noopener noreferrer">Задать вопрос</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+<section id="reviews" class="py-12 md:py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">Отзывы клиентов</h2>
+    <div class="grid md:grid-cols-3 gap-5">
+      <figure class="card rounded-2xl p-5">
+        <blockquote class="italic">«Спина перестала болеть после первого сеанса. Делает аккуратно, без боли.»</blockquote>
+        <figcaption class="mt-3 text-sm muted">— Анна К.</figcaption>
+      </figure>
+      <figure class="card rounded-2xl p-5">
+        <blockquote class="italic">«После самолёта очень помог. Внимательный и спокойный специалист.»</blockquote>
+        <figcaption class="mt-3 text-sm muted">— Дмитрий Л.</figcaption>
+      </figure>
+      <figure class="card rounded-2xl p-5">
+        <blockquote class="italic">«Хожу курсом на антицеллюлитный — эффект заметен, без синяков.»</blockquote>
+        <figcaption class="mt-3 text-sm muted">— Марина С.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 
 <!-- ABOUT -->
 <section id="about" class="py-12 md:py-16">
@@ -309,8 +395,8 @@ body.modal-open{ overflow:hidden; }
       <p class="muted mt-2">Роман Лунев. Опыт 4+ лет. Работал в отелях, SPA и частных кабинетах. Тактичный подход, аккуратность и спокойная атмосфера. Принимаю на партнёрских площадках, строго по записи.</p>
       <ul class="mt-4 space-y-2 text-slate-200"><li>• Без выездов</li><li>• Запись через WhatsApp или Telegram</li><li>• Внимание к деталям, персональный подход</li></ul>
       <div class="flex gap-3 mt-4 flex-wrap">
-        <a href="https://wa.me/79883461719" target="_blank" class="btn btn-wa">WhatsApp</a>
-        <a href="https://t.me/RomanDzen89" target="_blank" class="btn btn-tg">Telegram</a>
+        <a href="https://wa.me/79883461719" target="_blank" class="btn btn-wa" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://t.me/RomanDzen89" target="_blank" class="btn btn-tg" rel="noopener noreferrer">Telegram</a>
       </div>
     </div>
     <div class="card rounded-3xl p-3 shadow-lg reveal">
@@ -334,13 +420,13 @@ body.modal-open{ overflow:hidden; }
 
     <div class="md:hidden overflow-x-auto snap-x flex gap-4 px-1">
       <div class="min-w-[85%] snap rounded-2xl h-64 card frame overflow-hidden">
-        <img src="images/hero.jpg" alt="Кабинет" class="w-full h-full object-cover">
+        <img src="images/hero.jpg" alt="Кабинет" class="w-full h-full object-cover" decoding="async">
       </div>
       <div class="min-w-[85%] snap rounded-2xl h-64 card frame overflow-hidden">
-        <img src="images/process.jpg" alt="Процесс" class="w-full h-full object-cover">
+        <img src="images/process.jpg" alt="Процесс" class="w-full h-full object-cover" loading="lazy" decoding="async">
       </div>
       <div class="min-w-[85%] snap rounded-2xl h-64 card frame overflow-hidden">
-        <img src="images/work.jpg" alt="Работа" class="w-full h-full object-cover">
+        <img src="images/work.jpg" alt="Работа" class="w-full h-full object-cover" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -353,29 +439,49 @@ body.modal-open{ overflow:hidden; }
       <h3 class="text-2xl md:text-3xl font-extrabold">Готовы почувствовать лёгкость?</h3>
       <p class="muted mt-2">Запишитесь на удобное время — отвечу в мессенджере в течение дня.</p>
       <div class="flex justify-center gap-3 mt-4 flex-wrap">
-        <a href="https://wa.me/79883461719" target="_blank" class="btn btn-wa">WhatsApp</a>
-        <a href="https://t.me/RomanDzen89" target="_blank" class="btn btn-tg">Telegram</a>
+        <a href="https://wa.me/79883461719" target="_blank" class="btn btn-wa" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://t.me/RomanDzen89" target="_blank" class="btn btn-tg" rel="noopener noreferrer">Telegram</a>
         <a href="tel:+79883461719" class="btn btn-ghost">Позвонить</a>
       </div>
     </div>
   </div>
 </section>
 
+
+<section id="location" class="py-12 md:py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-2xl md:text-3xl font-bold mb-3">Где принимаю</h2>
+    <p class="muted mb-4">Анапа, центр. Точный адрес — по записи.</p>
+    <div class="grid md:grid-cols-2 gap-5">
+      <div class="card rounded-2xl p-5">
+        <h3 class="font-bold mb-2">Адрес</h3>
+        <div class="text-slate-200 leading-relaxed">
+          <div>г. Анапа</div>
+          <div>⏰ Пн–Вс 10:00–21:00</div>
+          <div>Тел.: <a href="tel:+79883461719" class="underline">+7 (988) 346‑17‑19</a></div>
+        </div>
+      </div>
+      <a href="https://maps.google.com/?q=Анапа массаж" target="_blank" class="rounded-2xl overflow-hidden frame block" rel="noopener noreferrer">
+        <img src="images/map-placeholder.jpg" alt="Карта — как добраться" class="w-full h-64 object-cover" loading="lazy" decoding="async">
+      </a>
+    </div>
+  </div>
+</section>
 <footer class="border-t border-slate-800 py-6 text-center text-sm text-slate-400">
   ROMAN LUNEV MASSAGE • Анапа • Тел.: +7 (988) 346‑17‑19
 </footer>
 
 <!-- Offer popup -->
-<div id="offer" class="fixed inset-0 z-[80] items-center justify-center bg-black/60 backdrop-blur-md p-4 hidden">
+<div id="offer" aria-labelledby="offerTitle" aria-describedby="offerDesc" class="fixed inset-0 z-[80] items-center justify-center bg-black/60 backdrop-blur-md p-4 hidden">
   <div class="offer-card rounded-2xl w-full max-w-md p-6 shadow-2xl relative">
     <div class="badge-fire text-sm md:text-base">
       −30% первый сеанс
     </div>
-    <h4 class="text-2xl font-extrabold mt-3 mb-2">Спецпредложение</h4>
-    <p class="text-lg leading-relaxed">Скидка на 60-минутный классический массаж. Напишите, чтобы забронировать время.</p>
+    <h4 id="offerTitle" class="text-2xl font-extrabold mt-3 mb-2">Спецпредложение</h4>
+    <p id="offerDesc" class="text-lg leading-relaxed">Скидка на 60-минутный классический массаж. Напишите, чтобы забронировать время.</p>
     <div class="flex gap-2 mt-5 flex-wrap">
-      <a href="https://wa.me/79883461719" target="_blank" class="btn btn-wa">WhatsApp</a>
-      <a href="https://t.me/RomanDzen89" target="_blank" class="btn btn-tg">Telegram</a>
+      <a href="https://wa.me/79883461719" target="_blank" class="btn btn-wa" rel="noopener noreferrer">WhatsApp</a>
+      <a href="https://t.me/RomanDzen89" target="_blank" class="btn btn-tg" rel="noopener noreferrer">Telegram</a>
       <button id="closeOffer" class="btn btn-ghost">Позже</button>
     </div>
   </div>
@@ -408,68 +514,127 @@ body.modal-open{ overflow:hidden; }
     requestAnimationFrame(raf);
   }
   if(window.matchMedia('(min-width: 768px)').matches){ requestAnimationFrame(raf); }
-
-  // Popup: exit-intent OR idle 17s
-  let shown=false;
-  const show = () => {
-  if (shown) return;
-  shown = true;
-  const o = document.getElementById('offer');
-  o.classList.remove('hidden');
-  o.classList.add('flex');
-  document.body.classList.add('modal-open'); // блокируем скролл
-};
-  document.addEventListener('mouseout',e=>{ if(e.clientY<=0) show(); });
-  let interacted=false;
-  ['scroll','click','keydown','mousemove','touchstart'].forEach(evt=>document.addEventListener(evt,()=>{interacted=true;},{passive:true}));
-  setTimeout(()=>{ if(!interacted) show(); },17000);
-  document.getElementById('closeOffer').addEventListener('click', () => {
-  const o = document.getElementById('offer');
-  o.classList.add('hidden');
-  o.classList.remove('flex');
-  document.body.classList.remove('modal-open'); // возвращаем скролл
-});
-
-
 </script>
-<!-- Floating “−30%” button (desktop only) -->
-<button id="promoFab" class="promo-fab" type="button" aria-controls="offer" aria-expanded="false">−30%</button>
+<script>
+(function(){
+  const offer   = document.getElementById('offer');
+  if (!offer) return;
+  const closeBtn= document.getElementById('closeOffer');
+  const fab     = document.getElementById('promoFab');
+
+  const LS_KEY='offerDismissedUntil';
+  const SESSION_KEY='offerShownSession';
+  const IDLE_SECONDS_DESKTOP=17;
+  const IDLE_SECONDS_MOBILE =25;
+
+  function isSuppressed(){
+    try{
+      const until=+localStorage.getItem(LS_KEY)||0;
+      const sessionShown=sessionStorage.getItem(SESSION_KEY)==='1';
+      return (Date.now()<until)||sessionShown;
+    }catch(e){return false;}
+  }
+
+  
+  // Focus trap for modal
+  let lastActive=null;
+  function getFocusable(root){
+    return root.querySelectorAll('a[href], button, textarea, input, select, [tabindex]:not([tabindex="-1"])');
+  }
+  function trapFocus(e){
+    const focusables = getFocusable(offer);
+    if (focusables.length===0) return;
+    const first=focusables[0];
+    const last=focusables[focusables.length-1];
+    if (e.key==='Tab'){
+      if (e.shiftKey && document.activeElement===first){ e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement===last){ e.preventDefault(); first.focus(); }
+    }
+  }
+  function openOffer(){
+    if (isSuppressed()) return;
+    if (!offer.classList.contains('hidden')) return;
+    lastActive=document.activeElement;
+    offer.classList.remove('hidden');
+    offer.classList.add('flex');
+    document.body.classList.add('modal-open');
+    sessionStorage.setItem(SESSION_KEY,'1');
+    if (fab) fab.setAttribute('aria-expanded','true');
+    // Move focus inside
+    const focusables=getFocusable(offer);
+    (focusables[0]||offer).focus();
+    document.addEventListener('keydown', trapFocus);
+  }
+  function closeOffer(days=0){
+    try{
+      const ms=days>0? days*24*60*60*1000 : 0;
+      if (ms) localStorage.setItem(LS_KEY, String(Date.now()+ms));
+    }catch(e){}
+    offer.classList.add('hidden');
+    offer.classList.remove('flex');
+    document.body.classList.remove('modal-open');
+    if (fab) fab.setAttribute('aria-expanded','false');
+    document.removeEventListener('keydown', trapFocus);
+    if (lastActive) lastActive.focus();
+  }
+  // Exit-intent (только десктоп)
+  function onMouseOut(e){
+    if (window.matchMedia('(pointer:fine)').matches && e.clientY<=0){
+      openOffer();
+      window.removeEventListener('mouseout', onMouseOut);
+    }
+  }
+  window.addEventListener('mouseout', onMouseOut);
+
+  // Idle-таймер (17с десктоп / 25с мобилка)
+  let idleTimer=null;
+  const idleLimit=window.matchMedia('(max-width: 767px)').matches
+    ? IDLE_SECONDS_MOBILE
+    : IDLE_SECONDS_DESKTOP;
+
+  function resetIdle(){
+    if (idleTimer) clearTimeout(idleTimer);
+    idleTimer=setTimeout(openOffer,idleLimit*1000);
+  }
+  ['mousemove','keydown','scroll','touchstart','click'].forEach(ev=>{
+    document.addEventListener(ev, resetIdle, {passive:true});
+  });
+  resetIdle();
+
+  // Привязки
+  if (fab)      fab.addEventListener('click', openOffer, {passive:true});
+  if (closeBtn) closeBtn.addEventListener('click', ()=>closeOffer(14)); // «Позже» — 14 дней
+  offer.addEventListener('click', e=>{ if(e.target===offer) closeOffer(); });
+  document.addEventListener('keydown', e=>{ if(e.key==='Escape' && !offer.classList.contains('hidden')) closeOffer(); });
+
+  // Доступность
+  offer.setAttribute('role','dialog');
+  offer.setAttribute('aria-modal','true');
+})();
+</script>
+
 <script>
   (function(){
-    const offer = document.getElementById('offer');
-    const closeBtn = document.getElementById('closeOffer');
-    const fab = document.getElementById('promoFab');
-
-    // открыть попап по клику на FAB (используем уже существующую функцию show())
-    if (fab && typeof show === 'function'){
-      fab.addEventListener('click', function(){
-        show();
-        fab.setAttribute('aria-expanded','true');
-      }, {passive:true});
-    }
-
-    // закрыть по Esc
-    document.addEventListener('keydown', function(e){
-      if (e.key === 'Escape' && offer && !offer.classList.contains('hidden')){
-        hideOffer();
-      }
+    const toggle = document.getElementById('menuToggle');
+    const panel  = document.getElementById('mobileNav');
+    if (!toggle || !panel) return;
+    toggle.addEventListener('click', ()=>{
+      const isOpen = panel.classList.toggle('hidden') === false || !panel.classList.contains('hidden');
+      const expanded = panel.classList.contains('hidden') ? 'false' : 'true';
+      toggle.setAttribute('aria-expanded', expanded);
     });
-
-    // закрыть по клику по фону
-    if (offer){
-      offer.addEventListener('click', function(e){
-        if (e.target === offer){ hideOffer(); }
-      });
-    }
-
-    function hideOffer(){
-  offer.classList.add('hidden');
-  offer.classList.remove('flex');
-  document.body.classList.remove('modal-open'); // <— добавили
-  const fab = document.getElementById('promoFab');
-  if (fab) fab.setAttribute('aria-expanded','false');
-}
+    // Close panel on link click (improves UX)
+    panel.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{
+      panel.classList.add('hidden');
+      toggle.setAttribute('aria-expanded', 'false');
+    }));
   })();
 </script>
+
+
+<button id="promoFab" class="fixed right-4 bottom-24 md:bottom-6 z-[70] rounded-full px-4 py-2 bg-sky-500/80 text-slate-900 font-bold shadow-lg border border-sky-300/60">
+  −30% акция
+</button>
+
 </body>
 </html>
