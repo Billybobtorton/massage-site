@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindBattle — креативная офлайн‑игра</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-GYb5X8WdGEylh4G6dkprdFM5lTyBC0bYKT1eZq9VHtV6nRvWmvMRGsiE9z1FMvx6bMpiKFFitvolG/Gp2vNm3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body{scroll-behavior:smooth}
+  </style>
+</head>
+<body class="text-gray-100 bg-gray-900 font-sans">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-gray-900/80 backdrop-blur shadow">
+    <nav class="container mx-auto flex items-center justify-between p-4">
+      <a href="#hero" class="text-2xl font-bold">MindBattle</a>
+      <div id="navLinks" class="hidden md:flex space-x-6">
+        <a href="#about" class="hover:text-teal-300">О игре</a>
+        <a href="#steps" class="hover:text-teal-300">Как проходит</a>
+        <a href="#register" class="hover:text-teal-300">Запись</a>
+        <a href="#reviews" class="hover:text-teal-300">Отзывы</a>
+        <a href="#contacts" class="hover:text-teal-300">Контакты</a>
+      </div>
+      <button id="menuBtn" class="md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-7 h-7">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+      <a href="#about" class="block py-1">О игре</a>
+      <a href="#steps" class="block py-1">Как проходит</a>
+      <a href="#register" class="block py-1">Запись</a>
+      <a href="#reviews" class="block py-1">Отзывы</a>
+      <a href="#contacts" class="block py-1">Контакты</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="h-screen bg-cover bg-center flex items-center justify-center relative" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80');">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative text-center space-y-6 px-4" data-aos="fade-up">
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Игра, где интеллект побеждает случай.<br><span class="text-teal-400">Устное противостояние умов.</span></h1>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#register" class="px-8 py-3 bg-teal-500 hover:bg-teal-600 rounded-full font-semibold">Записаться на игру</a>
+        <a href="#about" class="px-8 py-3 border border-teal-500 rounded-full font-semibold hover:bg-teal-500/20">Как это работает?</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up">О игре</h2>
+    <div class="flex flex-col md:flex-row items-center gap-10">
+      <div class="md:w-1/2" data-aos="fade-right">
+        <p class="text-lg mb-4">MindBattle — соревновательная офлайн-игра, в которой участники выполняют креативные задания и борются за признание жюри. Здесь побеждает не удача, а скорость мысли и сила аргумента.</p>
+        <p class="text-lg">Каждый раунд — новое испытание: от экспромтов до импровизированных рассказов. Судьи внимательно слушают и выбирают тех, кто сумел удивить и обойти соперников.</p>
+      </div>
+      <div class="md:w-1/2" data-aos="fade-left">
+        <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=60" alt="Пример игры" class="rounded-lg shadow-lg">
+      </div>
+    </div>
+  </section>
+
+  <!-- Steps -->
+  <section id="steps" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Как проходит игра</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-900 p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-5xl mb-4">1</div>
+          <h3 class="text-xl font-semibold mb-2">Получаешь задание</h3>
+          <p class="mb-4">Короткая творческая задача задаёт тему раунда.</p>
+          <button class="more-btn text-teal-400 underline" data-target="task1">Подробнее</button>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-5xl mb-4">2</div>
+          <h3 class="text-xl font-semibold mb-2">Придумываешь и рассказываешь</h3>
+          <p class="mb-4">У тебя есть пара минут, чтобы поразить соперников.</p>
+          <button class="more-btn text-teal-400 underline" data-target="task2">Подробнее</button>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="text-5xl mb-4">3</div>
+          <h3 class="text-xl font-semibold mb-2">Судьи выбирают лучших</h3>
+          <p class="mb-4">Экспертная комиссия оценивает идеи и подводит итоги.</p>
+          <button class="more-btn text-teal-400 underline" data-target="task3">Подробнее</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for tasks -->
+  <div id="taskModal" class="fixed inset-0 bg-black/70 hidden items-center justify-center p-4">
+    <div class="bg-gray-900 p-6 rounded max-w-md text-center">
+      <p id="taskModalContent" class="mb-6"></p>
+      <button id="closeModal" class="px-4 py-2 bg-teal-500 rounded">Закрыть</button>
+    </div>
+  </div>
+
+  <!-- Registration -->
+  <section id="register" class="py-20 container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up">Запись на игру</h2>
+    <form id="regForm" class="max-w-md mx-auto space-y-4" data-aos="fade-up" data-aos-delay="100">
+      <input type="text" placeholder="Имя" required class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-400">
+      <input type="tel" placeholder="Телефон" required class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-400">
+      <input type="text" placeholder="Telegram" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-400">
+      <button type="submit" class="w-full py-3 bg-teal-500 hover:bg-teal-600 rounded font-semibold">Хочу играть</button>
+    </form>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Отзывы</h2>
+      <div id="reviewSlider" class="relative max-w-xl mx-auto overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+        <div class="slides flex transition-transform duration-500">
+          <div class="w-full flex-shrink-0 p-6 text-center">
+            <p class="italic mb-4">«Невероятно прокачивает мозги и заставляет мыслить вне коробки!»</p>
+            <p class="font-semibold">— Алексей</p>
+          </div>
+          <div class="w-full flex-shrink-0 p-6 text-center">
+            <p class="italic mb-4">«Атмосфера дружелюбная, но дух соревнования чувствуется постоянно.»</p>
+            <p class="font-semibold">— Мария</p>
+          </div>
+          <div class="w-full flex-shrink-0 p-6 text-center">
+            <p class="italic mb-4">«Лучший способ провести вечер и проверить себя на креативность!»</p>
+            <p class="font-semibold">— Иван</p>
+          </div>
+        </div>
+        <div class="flex justify-center mt-4 space-x-2">
+          <button class="w-3 h-3 rounded-full bg-teal-400" data-index="0"></button>
+          <button class="w-3 h-3 rounded-full bg-gray-500" data-index="1"></button>
+          <button class="w-3 h-3 rounded-full bg-gray-500" data-index="2"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacts -->
+  <section id="contacts" class="py-20 container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up">Организаторы</h2>
+    <div class="grid md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+      <div class="text-center">
+        <img src="https://images.unsplash.com/photo-1603415526960-f7e0328a9aa1?auto=format&fit=crop&w=200&q=60" alt="Организатор" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+        <h3 class="text-xl font-semibold">Елена</h3>
+        <div class="mt-2">
+          <a href="https://t.me/example1" class="text-teal-400 hover:underline">Telegram</a>
+        </div>
+      </div>
+      <div class="text-center">
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=200&q=60" alt="Организатор" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+        <h3 class="text-xl font-semibold">Дмитрий</h3>
+        <div class="mt-2">
+          <a href="https://t.me/example2" class="text-teal-400 hover:underline">Telegram</a>
+        </div>
+      </div>
+      <div class="text-center">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=60" alt="Организатор" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+        <h3 class="text-xl font-semibold">Ирина</h3>
+        <div class="mt-2">
+          <a href="https://t.me/example3" class="text-teal-400 hover:underline">Telegram</a>
+        </div>
+      </div>
+    </div>
+    <p class="text-center mt-10" data-aos="fade-up" data-aos-delay="200">Есть вопросы? Напишите нашему <a href="https://t.me/example_bot" class="text-teal-400 hover:underline">Telegram‑боту</a>.</p>
+  </section>
+
+  <footer class="py-6 text-center text-sm text-gray-500 bg-gray-800">© 2024 MindBattle. Все права защищены.</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYkM5t1G6gIKgJ6TP2PzefDs2fzGEylh4G6dkprdFM5lTyBC0bYKT1eZq9VHtV6nRvWmvMRGsiE9z1FMvx6bMpiKFFitvolG" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    AOS.init({ once: true });
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e){
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth'}); mobileMenu.classList.add('hidden'); }
+      });
+    });
+
+    // Modal logic
+    const modal = document.getElementById('taskModal');
+    const modalContent = document.getElementById('taskModalContent');
+    const closeModal = document.getElementById('closeModal');
+    const taskTexts = {
+      task1: 'Пример задания: придумай 10 применений карандаша, не связанных с рисованием.',
+      task2: 'Пример задания: расскажи историю о путешествии во времени, используя три случайных слова.',
+      task3: 'Пример задания: защити свою идею перед жюри, используя всего пять предложений.'
+    };
+    document.querySelectorAll('.more-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        modalContent.textContent = taskTexts[btn.dataset.target];
+        modal.classList.remove('hidden');
+      });
+    });
+    closeModal.addEventListener('click', () => modal.classList.add('hidden'));
+    modal.addEventListener('click', e => { if(e.target === modal) modal.classList.add('hidden'); });
+
+    // Registration form
+    document.getElementById('regForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Спасибо! Мы свяжемся с вами.');
+      this.reset();
+    });
+
+    // Review slider
+    const slider = document.querySelector('#reviewSlider .slides');
+    const dots = document.querySelectorAll('#reviewSlider [data-index]');
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        slider.style.transform = `translateX(-${dot.dataset.index * 100}%)`;
+        dots.forEach(d => d.classList.replace('bg-teal-400','bg-gray-500'));
+        dot.classList.replace('bg-gray-500','bg-teal-400');
+      });
+    });
+  </script>
+</body>
+</html>
