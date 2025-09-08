@@ -1,0 +1,6 @@
+html {scroll-behavior: smooth;}
+body {font-family: system-ui, sans-serif;}
+.glass {background: rgba(26,34,53,0.6); backdrop-filter: blur(12px);}
+.neon {text-shadow: 0 0 5px #00E5FF;}
+.btn-glow:hover {box-shadow: 0 0 10px #00E5FF; transform: translateY(-2px);}
+.transition-all {transition: all 0.3s ease;}

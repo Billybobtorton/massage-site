@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Звёздные врата: Спасение Земли (R.A.S.)</title>
+  <meta name="description" content="Настольная ролевая игра социального дедукции. Спаси Землю. Пройди врата.">
+  <link rel="canonical" href="https://example.com/">
+  <meta property="og:title" content="Звёздные врата: Спасение Земли">
+  <meta property="og:description" content="Играй офлайн в социальную стратегию R.A.S.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1527443224154-b32c2b59d2d5?auto=format&fit=crop&w=1200&q=60">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="robots" content="index,follow">
+  <link rel="sitemap" type="application/xml" href="sitemap.xml">
+  <link rel="icon" href="assets/logo.svg">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#0B1020] text-[#EAF2FF] scroll-smooth">
+<a href="#main" class="sr-only focus:not-sr-only">Перейти к содержимому</a>
+<header class="sticky top-0 z-50 glass">
+  <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+    <a href="#hero" class="flex items-center gap-2">
+      <img src="assets/logo.svg" alt="Логотип" class="h-8 w-8">
+      <span class="font-bold">R.A.S.</span>
+    </a>
+    <nav aria-label="Главное">
+      <ul class="flex flex-wrap gap-4">
+        <li><a href="#how" class="hover:text-[#00E5FF]">Как это проходит</a></li>
+        <li><a href="#races" class="hover:text-[#00E5FF]">Расы</a></li>
+        <li><a href="#cataclysms" class="hover:text-[#00E5FF]">Катаклизмы</a></li>
+        <li><a href="#missions" class="hover:text-[#00E5FF]">Миссии</a></li>
+        <li><a href="#calc" class="hover:text-[#00E5FF]">Калькулятор</a></li>
+        <li><a href="#schedule" class="hover:text-[#00E5FF]">Расписание</a></li>
+        <li><a href="#faq" class="hover:text-[#00E5FF]">FAQ</a></li>
+        <li><a href="rules.html" target="_blank" class="hover:text-[#00E5FF]">Правила</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main" class="font-sans">
+  <section id="hero" class="min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1527443224154-b32c2b59d2d5?auto=format&fit=crop&w=1600&q=60');">
+    <h1 class="text-4xl md:text-6xl font-extrabold neon mb-6" data-aos="zoom-in">Спаси Землю. Пройди врата.</h1>
+    <div class="flex gap-4" data-aos="fade-up">
+      <a href="#schedule" class="bg-[#F2C94C] text-black px-6 py-3 rounded btn-glow transition-all">Записаться</a>
+      <a href="#how" class="border border-[#00E5FF] px-6 py-3 rounded btn-glow transition-all">Как это работает</a>
+    </div>
+  </section>
+  <section id="how" class="py-20 max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-10 neon" data-aos="fade-right">Как проходит игра</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="glass p-6 rounded" data-aos="fade-up">
+        <h3 class="font-bold mb-2">День</h3>
+        <p class="text-sm">Горожане обсуждают и отправляют команду на миссию.</p>
+      </div>
+      <div class="glass p-6 rounded" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="font-bold mb-2">Ночь</h3>
+        <p class="text-sm">Хищники и чужие действуют в тени.</p>
+      </div>
+      <div class="glass p-6 rounded" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="font-bold mb-2">Подсчёт очков</h3>
+        <p class="text-sm">Команда получает прогресс и раскрывает тайны.</p>
+      </div>
+    </div>
+  </section>
+  <section id="races" class="py-20 bg-[#0B1020] max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-10 neon" data-aos="fade-right">Расы</h2>
+    <div id="races-grid" class="grid md:grid-cols-3 gap-6"></div>
+  </section>
+  <section id="cataclysms" class="py-20 max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-10 neon" data-aos="fade-right">Катаклизмы</h2>
+    <div id="cataclysms-grid" class="grid md:grid-cols-2 gap-6"></div>
+  </section>
+  <section id="missions" class="py-20 bg-[#0B1020] max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-10 neon" data-aos="fade-right">Миссии</h2>
+    <div id="missions-grid" class="grid md:grid-cols-3 gap-6"></div>
+  </section>
+  <section id="calc" class="py-20 max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-10 neon" data-aos="fade-right">Калькулятор очков</h2>
+    <div class="glass p-6 rounded space-y-4" data-aos="fade-up">
+      <div>
+        <label for="calc-cataclysm" class="block mb-2">Катаклизм</label>
+        <select id="calc-cataclysm" class="w-full bg-[#1A2235] p-2 rounded"></select>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+        <div><label for="count-mars" class="block">Марсиане</label><input type="number" id="count-mars" min="0" max="5" value="0" class="w-full text-black p-1 rounded"></div>
+        <div><label for="count-saturn" class="block">Сатурняне</label><input type="number" id="count-saturn" min="0" max="5" value="0" class="w-full text-black p-1 rounded"></div>
+        <div><label for="count-poly" class="block">Полиморфы</label><input type="number" id="count-poly" min="0" max="5" value="0" class="w-full text-black p-1 rounded"></div>
+        <div><label for="count-venus" class="block">Венеряне</label><input type="number" id="count-venus" min="0" max="5" value="0" class="w-full text-black p-1 rounded"></div>
+        <div><label for="count-jupiter" class="block">Юпитеряне</label><input type="number" id="count-jupiter" min="0" max="5" value="0" class="w-full text-black p-1 rounded"></div>
+        <div><label for="count-predator" class="block">Хищники</label><input type="number" id="count-predator" min="0" max="5" value="0" class="w-full text-black p-1 rounded"></div>
+        <div><label for="count-alien" class="block">Чужие</label><input type="number" id="count-alien" min="0" max="5" value="0" class="w-full text-black p-1 rounded"></div>
+        <div class="flex items-end">Команда: <span id="team-size" class="ml-1">0</span></div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
+        <label class="flex items-center gap-2"><input type="checkbox" id="event-revealedPredator" class="text-black"> <span>Выведен хищник +3</span></label>
+        <label class="flex items-center gap-2"><input type="checkbox" id="event-revealedAlien" class="text-black"> <span>Выведен чужой +3</span></label>
+        <label class="flex items-center gap-2"><input type="checkbox" id="event-infection" class="text-black"> <span>Инфекция −3</span></label>
+        <label class="flex items-center gap-2"><input type="checkbox" id="event-killByPredator" class="text-black"> <span>Убит хищником −5</span></label>
+      </div>
+      <div class="w-full bg-[#1A2235] h-3 rounded"><div id="score-bar" class="h-3 rounded bg-red-500" style="width:0%"></div></div>
+      <p id="score-text" class="font-bold">Очки состава: 0</p>
+      <p id="score-hint" class="text-sm text-cyan-300"></p>
+      <p id="mission-result" class="text-sm"></p>
+      <p class="text-sm">События: <span id="event-points">0</span></p>
+      <button id="copy-result" class="bg-[#00E5FF] text-black px-4 py-2 rounded btn-glow">Копировать результат</button>
+    </div>
+  </section>
+  <section id="schedule" class="py-20 bg-[#0B1020] max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-10 neon" data-aos="fade-right">Расписание и запись</h2>
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="glass p-6 rounded" data-aos="fade-up">
+        <h3 class="font-bold mb-2">15 мая — Москва</h3>
+        <p class="text-sm">Коворкинг “Орбита” · осталось 5 мест</p>
+      </div>
+      <div class="glass p-6 rounded" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="font-bold mb-2">22 мая — Санкт-Петербург</h3>
+        <p class="text-sm">Лофт “Квант” · осталось 3 места</p>
+      </div>
+    </div>
+    <form id="signup-form" class="glass p-6 rounded grid gap-4" data-aos="fade-up">
+      <label class="block">Имя
+        <input required name="name" class="w-full text-black p-2 rounded" type="text">
+      </label>
+      <label class="block">Telegram/Email
+        <input required name="contact" class="w-full text-black p-2 rounded" type="text">
+      </label>
+      <label class="block">Сообщение
+        <textarea name="message" class="w-full text-black p-2 rounded" rows="3"></textarea>
+      </label>
+      <button type="submit" class="bg-[#F2C94C] text-black px-4 py-2 rounded btn-glow">Отправить</button>
+      <p id="form-msg" class="hidden text-green-400">Спасибо! Мы свяжемся.</p>
+    </form>
+  </section>
+  <section id="faq" class="py-20 max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-10 neon" data-aos="fade-right">FAQ</h2>
+    <div class="space-y-4">
+      <div class="glass p-4 rounded">
+        <button data-accordion aria-expanded="false" aria-controls="faq1" class="w-full text-left font-bold">Сколько длится игра?</button>
+        <div id="faq1" class="hidden mt-2 text-sm">Обычно 2–3 часа.</div>
+      </div>
+      <div class="glass p-4 rounded">
+        <button data-accordion aria-expanded="false" aria-controls="faq2" class="w-full text-left font-bold">Нужен ли опыт?</button>
+        <div id="faq2" class="hidden mt-2 text-sm">Нет, правила объясним на месте.</div>
+      </div>
+    </div>
+  </section>
+  <section id="contacts" class="py-10 bg-[#0B1020] max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-6 neon" data-aos="fade-right">Контакты</h2>
+    <p class="text-sm mb-2">Telegram: <a href="https://t.me/example" class="text-[#00E5FF]">@example</a></p>
+    <p class="text-sm">Email: <a href="mailto:info@example.com" class="text-[#00E5FF]">info@example.com</a></p>
+  </section>
+</main>
+<footer class="text-center text-xs py-6 glass">© 2026 R.A.S. <a href="#hero" class="text-[#00E5FF]">Вверх</a></footer>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="app.js"></script>
+<script src="js/scoring.js"></script>
+</body>
+</html>
