@@ -1,0 +1,26 @@
+[
+  {
+    "id": "tech",
+    "name": "Техногенная буря",
+    "favoredRaceId": "mars",
+    "description": "Порталы перегружены, нужны инженеры."
+  },
+  {
+    "id": "social",
+    "name": "Социальная нестабильность",
+    "favoredRaceId": "venus",
+    "description": "Паника и мятежи среди колонистов."
+  },
+  {
+    "id": "bio",
+    "name": "Биологическая угроза",
+    "favoredRaceId": "saturn",
+    "description": "Неизвестный вирус распространяется."
+  },
+  {
+    "id": "nature",
+    "name": "Природные катаклизмы",
+    "favoredRaceId": "jupiter",
+    "description": "Гравитационные штормы и землетрясения."
+  }
+]

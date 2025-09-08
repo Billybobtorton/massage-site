@@ -1,0 +1,58 @@
+[
+  {
+    "id": "rescue",
+    "title": "Эвакуация колонистов",
+    "description": "Спасите людей через аварийные врата.",
+    "requiredPointsMin": 15,
+    "optimalRange": [20, 25]
+  },
+  {
+    "id": "reactor",
+    "title": "Перезапуск реактора",
+    "description": "Запустите энергоядро до перегрева.",
+    "requiredPointsMin": 15,
+    "optimalRange": [20, 25]
+  },
+  {
+    "id": "beacon",
+    "title": "Сигнал маяка",
+    "description": "Установите маяк связи на орбите.",
+    "requiredPointsMin": 15,
+    "optimalRange": [20, 25]
+  },
+  {
+    "id": "cure",
+    "title": "Поиск лекарства",
+    "description": "Соберите образцы и найдите антидот.",
+    "requiredPointsMin": 15,
+    "optimalRange": [20, 25]
+  },
+  {
+    "id": "defense",
+    "title": "Оборона станции",
+    "description": "Отбейте атаку с орбиты.",
+    "requiredPointsMin": 15,
+    "optimalRange": [20, 25]
+  },
+  {
+    "id": "research",
+    "title": "Изучение артефакта",
+    "description": "Расшифруйте древний сигнал.",
+    "requiredPointsMin": 15,
+    "optimalRange": [20, 25]
+  },
+  {
+    "id": "escort",
+    "title": "Сопровождение конвоя",
+    "description": "Доставьте ресурсы через опасную зону.",
+    "requiredPointsMin": 15,
+    "optimalRange": [20, 25]
+  },
+  {
+    "id": "gate",
+    "title": "Стабилизация врат",
+    "description": "Держите портал открытым как можно дольше.",
+    "requiredPointsMin": 15,
+    "optimalRange": [20, 25]
+  }
+]
